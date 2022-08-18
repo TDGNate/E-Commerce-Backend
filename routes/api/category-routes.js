@@ -8,8 +8,14 @@ router.get('/', async (req, res) => {
     // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll({
-      include: [{ model: Category }, { model: Product }]
+      include: [{ model: Product }]
     })
+
+    if (!categoryData) {
+      res.status(404).json({ message: "Category Not Found" })
+      return;
+    }
+
     res.status(200).json(categoryData)
   } catch (err) {
     res.status(500).json(err)
@@ -22,7 +28,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
   try {
     const categoryDataById = await Category.findByPk(req.params.id, {
-      include: [{ model: Category }, { model: Product }]
+      include: [{ model: Product }]
     })
 
     if (!categoryDataById) {
@@ -40,9 +46,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   // create a new category
   try {
-    const categoryCreate = await Category.create({
-      category_name: req.body.category_name
-    })
+    const categoryCreate = await Category.create(req.body)
     res.status(200).json(categoryCreate)
   } catch (err) {
     res.status(500).json({ "message": "Server Error" })
@@ -52,7 +56,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   try {
-    const categoryUpdateById = await Category.update(req.body.category_name, {
+    const categoryUpdateById = await Category.update(req.body, {
       where: {
         id: req.params.id,
       }
@@ -63,7 +67,7 @@ router.put('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(categoryUpdateById)
+    res.status(200).json({ categoryUpdateById })
   } catch (err) {
     res.status(500).json(err)
   }
@@ -83,7 +87,7 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json({ message: "Successfully Deleted" }, categoryDelete)
+    res.status(200).json(categoryDelete)
   } catch (err) {
     res.status(500).json(err)
   }
