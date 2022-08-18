@@ -19,6 +19,8 @@ This is the backend for an e-commerce site that uses express, sequelize, and MyS
 The main usage is to easily create, update, and delete data from the database.
 </br>
 <img src="./Assets/img/insomnia.png" alt="insomnia screenshot">
+</br>
+<img src="./Assets/img/Associations.png" alt="Associations screenshot">
 
 ## Install
 
