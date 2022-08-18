@@ -24,6 +24,7 @@ The main usage is to easily create, update, and delete data from the database.
 - `Insomnia`
   - link
   - GET, POST, PUT, and DELETE routes for all and single items in Insomnia
+  </hr>
     </br>
     <img src="./Assets/img/insomnia.png" alt="insomnia screenshot">
     </br>
