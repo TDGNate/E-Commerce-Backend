@@ -1,6 +1,6 @@
 # E-Commerce Backend
 
-This is the backend for an e-commerce site that uses express, sequelize, and MySQL for the database.
+This is the backend for an e-commerce site that uses express, sequelize, and MySQL for the database. The user is able get certain tables from the database, add new items, update certain items, and delete items from the database.
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
@@ -16,15 +16,16 @@ This is the backend for an e-commerce site that uses express, sequelize, and MyS
 
 ## Usage
 
-The main usage is to easily create, update, and delete data from their database
+The main usage is to easily create, update, and delete data from the database.
 
 ## Install
 
-To install, run `npm install` to download the packages in the package json file which will allow you to run this application
+- To install, run `npm install` to download the packages in the package json file which will allow you to run this application.
+- To start the application, run `npm start`
 
 ## Contributing
 
-Clone Project, add your changes, and make a pull request
+Clone Project, add your changes, and make a pull request!
 
 ## Tests
 
