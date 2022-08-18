@@ -56,6 +56,11 @@ router.get('/:id', async (req, res) => {
 // get new Category
 router.post('/', async (req, res) => {
 
+  // example body:
+  // {
+  //   "category_name": "Belts"
+  // }
+
   // create a new category
   try {
     const categoryCreate = await Category.create(req.body)
@@ -112,7 +117,6 @@ router.delete('/:id', async (req, res) => {
 
     res.status(200).json(categoryDelete)
   } catch (err) {
-
      // server error 
     res.status(500).json(err)
   }
