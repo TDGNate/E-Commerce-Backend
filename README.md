@@ -19,7 +19,7 @@ This is the backend for an e-commerce site that uses express, sequelize, and MyS
 The main usage is to easily create, update, and delete data from the database.
 
 - `CLI Video`
-  - https://drive.google.com/file/d/1RsoIhSlMavmwq9HsHvrcqlYnLRIIU4Sd/view
+  - https://drive.google.com/file/d/1z2Q2DRgrrfbBK5DkOl8Rne5mqFMrN_sF/view
   - `mysql -u root -p`, `source db/schema.sql`, `npm run seed`, and `npm start`
 - `Insomnia`
   - https://drive.google.com/file/d/1pUQRBZWoElCDRKzDNpPYuZNtOaILL9XB/view
