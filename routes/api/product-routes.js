@@ -41,7 +41,6 @@ router.get('/:id', async (req, res) => {
     res.status(200).json(productDataById)
   } catch (err) {
     res.status(500).json({ "message": "Server Error" })
-    console.log(err)
   }
 });
 
@@ -72,7 +71,6 @@ router.post('/', async (req, res) => {
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
-      console.log(err);
       res.status(400).json(err);
     });
 });
@@ -87,7 +85,9 @@ router.put('/:id', async (req, res) => {
   })
     .then((product) => {
       // find all associated tags from ProductTag
-      return ProductTag.findAll({ where: { product_id: req.params.id } });
+      return ProductTag.findAll({
+        where: { product_id: req.params.id }
+      });
     })
     .then((productTags) => {
       // get list of current tag_ids
@@ -114,7 +114,6 @@ router.put('/:id', async (req, res) => {
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
       res.status(400).json(err);
     });
 });
