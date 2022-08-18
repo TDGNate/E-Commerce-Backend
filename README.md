@@ -17,10 +17,17 @@ This is the backend for an e-commerce site that uses express, sequelize, and MyS
 ## Usage
 
 The main usage is to easily create, update, and delete data from the database.
-</br>
-<img src="./Assets/img/insomnia.png" alt="insomnia screenshot">
-</br>
-<img src="./Assets/img/Associations.png" alt="Associations screenshot">
+
+- `CLI Video`
+  - https://drive.google.com/file/d/1RsoIhSlMavmwq9HsHvrcqlYnLRIIU4Sd/view
+  - `mysql -u root -p`, `source db/schema.sql`, `npm run seed`, and `npm start`
+- `Insomnia`
+  - link
+  - GET, POST, PUT, and DELETE routes for all and single items in Insomnia
+    </br>
+    <img src="./Assets/img/insomnia.png" alt="insomnia screenshot">
+    </br>
+    <img src="./Assets/img/Associations.png" alt="Associations screenshot">
 
 ## Install
 
