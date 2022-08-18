@@ -17,6 +17,8 @@ This is the backend for an e-commerce site that uses express, sequelize, and MyS
 ## Usage
 
 The main usage is to easily create, update, and delete data from the database.
+</br>
+<img src="./Assets/img/insomnia.png" alt="insomnia screenshot">
 
 ## Install
 
